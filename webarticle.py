@@ -16,25 +16,6 @@ parser.add_argument('-p', '--print', help='打印网页正文', action='store_tr
 parser.add_argument('-s', '--store', help='保存网页正文,可以添加路径和参数 -s \'/home/local/xxx test1\' 或者采用默认方式 -s \'\'', type=str)
 args = parser.parse_args()
 
-
-class test(object):
-
-    def __init__(self):
-        if args.keyword:
-
-            self.keyword = args.keyword
-            # 只留一个关键字
-            realip = re.sub(r'\s+', ' ', self.keyword)
-            if ' ' in realip:
-                self.keyword = realip.split(' ')[0]
-
-            print(self.keyword)
-
-        else:
-
-            self.url = args.url
-            print(self.url)
-
 class webarticle(object):
 
     def __init__(self):
