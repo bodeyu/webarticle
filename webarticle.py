@@ -65,8 +65,7 @@ class webarticle(object):
         self.begin = self.end = 0  # 正文开头行和结尾行
         self.encoder = self.get_url_chardet(self.url)
         self.req = requests.get(self.url)
-        # self.req.encoding = self.encoder
-        self.req.encoding = 'gbk'
+        self.req.encoding = self.encoder
         self.text = self.req.text
 
         self.clean_text()
@@ -237,21 +236,4 @@ class webarticle(object):
         plt.show()
                 
 w = webarticle()
-
-
-
-
-'''
-http://www.yjbys.com/gongwuyuan/show-506089.html
-
-http://yjbys.com/gongzuozongjie/2013/1219977.html
-http://www.xuexila.com/xinde/741596.html
-http://gw.yjbys.com/baogao/73776.html
-
-http://liyinghuan.baijia.baidu.com/article/2011
-http://tech.163.com/13/1230/10/9HB88VE600094NRG.html
-http://news.sohu.com/20131229/n392604462.shtml
-
-
-'''
 
