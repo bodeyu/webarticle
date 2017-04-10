@@ -70,7 +70,6 @@ for i, line in enumerate(lines):
 if len(article) == 1:
     begin = end = article[0]
 else:
-    article = list(set(article))
     article.sort()
     begin = article[0]
     end = article[-1]
